@@ -1529,3 +1529,109 @@ img {
     display:inline-block
   }
 }
+
+/* ==== 追加: LINE誘導ボタン（ファーストビューの白／固定バーの金） ==== */
+
+/* LINEマーク（画像を使わず文字で組む。白ボタン＝緑地、金ボタン＝紺地） */
+.btn-line-mark {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:20px;
+  border-radius:4px;
+  background:#06c755;
+  color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:.625rem;
+  font-weight:700;
+  letter-spacing:.02em;
+  flex:none
+}
+
+/* ファーストビューの白ボタン */
+.hero-actions {
+  margin-top:36px
+}
+
+.btn-white {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  min-height:60px;
+  padding:17px 34px;
+  background:var(--white);
+  color:var(--navy);
+  font-size:1.0625rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  border-radius:2px;
+  box-shadow:0 10px 30px rgba(16,35,51,.32);
+  transition:background .2s,color .2s,transform .2s
+}
+
+.btn-white:hover {
+  background:var(--gold-light);
+  transform:translateY(-1px)
+}
+
+.hero-actions-note {
+  margin-top:14px;
+  font-size:.8125rem;
+  letter-spacing:.06em;
+  color:#dfe4e4
+}
+
+/* 固定バーの金ボタン */
+.btn-gold {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:46px;
+  padding:12px 26px;
+  background:linear-gradient(180deg,var(--gold-light),var(--gold));
+  color:var(--navy);
+  font-size:.9375rem;
+  font-weight:700;
+  letter-spacing:.06em;
+  white-space:nowrap;
+  border-radius:2px;
+  flex:none;
+  transition:filter .2s
+}
+
+.btn-gold:hover {
+  filter:brightness(1.08)
+}
+
+.btn-gold .btn-line-mark {
+  background:var(--navy)
+}
+
+@media(max-width:640px) {
+  .hero-actions {
+    margin-top:28px
+  }
+
+  .btn-white {
+    display:flex;
+    width:100%;
+    min-height:56px;
+    padding:15px 20px;
+    font-size:1rem
+  }
+
+  .hero-actions-note {
+    font-size:.75rem;
+    text-align:center
+  }
+
+  .btn-gold {
+    min-height:42px;
+    padding:10px 16px;
+    font-size:.8125rem;
+    gap:8px
+  }
+}
