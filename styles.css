@@ -1519,3 +1519,13 @@ img {
     transition:none
   }
 }
+
+/* ==== 追加: 文節ごとの改行 ==== */
+
+/* 文節の途中で折り返さない（HTML側の <w-b> と対）。
+   901px以上の画面では inline のままなので、PCの見た目は変わらない */
+@media(max-width:900px) {
+  w-b {
+    display:inline-block
+  }
+}
