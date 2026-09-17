@@ -66,15 +66,30 @@ LINE公式アカウント: `https://lin.ee/Xkldeyi`
 python -m http.server 8975 --directory "C:/Users/realize5/Documents/Claude/realize-employee-dreams-lp"
 ```
 
-## 公開する前にやること
+## 公開先（2026年9月17日 公開済み）
 
-`index.html` の冒頭に、元サイトのURLが3か所残っている（9〜11行目あたり）。
-別のURLで公開するなら、この3つを新しいURLに書き換える。そのままだと
-検索エンジンが「本物は元サイトのほう」と判断してしまう。
+```
+https://nrealize6078-hue.github.io/realize-employee-dreams-lp/
+```
 
-- `<link rel="canonical" href="...">`
-- `<meta property="og:url" content="...">`
-- フッター内のリンク
+| | |
+|---|---|
+| リポジトリ | [nrealize6078-hue/realize-employee-dreams-lp](https://github.com/nrealize6078-hue/realize-employee-dreams-lp)（public） |
+| 公開方法 | GitHub Pages（main / ルート） |
+| 検索エンジン | **掲載する**（noindexは入れていない） |
 
-OGP画像（SNSやLINEでURLを送ったときのサムネイル）は元サイトにも設定が無い。
+`index.html` の canonical と og:url も、この公開URLに書き換え済み。
+
+### 直したあとの反映
+
+```bash
+cd "C:/Users/realize5/Documents/Claude/realize-employee-dreams-lp"
+git add -A && git commit -m "説明" && git push
+```
+
+pushの1〜2分後に本番へ反映される。
+
+### 残っている宿題
+
+OGP画像（SNSやLINEでURLを送ったときのサムネイル）が未設定。元サイトにも無かった。
 必要なら 1200×630 の画像を `assets/ogp.jpg` として置き、`<meta property="og:image">` を追加する。
